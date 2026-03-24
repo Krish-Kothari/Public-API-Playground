@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public API Playground</title>
+    <meta name="description" content="Explore and test various public APIs in one unified interface.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="glass-background"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Public API Playground</h1>
+            <p>Explore random dogs, jokes, users, and placeholder posts.</p>
+        </header>
+
+        <nav class="tabs" id="tabs-container">
+            <button class="tab-btn active" data-target="dog-tab">Dog Finder</button>
+            <button class="tab-btn" data-target="joke-tab">Joke Generator</button>
+            <button class="tab-btn" data-target="user-tab">Random User</button>
+            <button class="tab-btn" data-target="posts-tab">JSON Posts</button>
+        </nav>
+
+        <main class="content-area">
+            <!-- Dog Finder Tab -->
+            <section id="dog-tab" class="tab-pane active fade-in">
+                <div class="card premium-card">
+                    <div class="card-header">
+                        <h2>🐶 Dog Finder</h2>
+                    </div>
+                    <div class="card-body" id="dog-content">
+                        <!-- Content dynamically injected here -->
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn-get-dog" class="primary-btn">Get Dog</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Joke Generator Tab -->
+            <section id="joke-tab" class="tab-pane fade-in">
+                <div class="card premium-card">
+                    <div class="card-header">
+                        <h2>🤣 Joke Generator</h2>
+                    </div>
+                    <div class="card-body" id="joke-content">
+                        <!-- Content dynamically injected here -->
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn-get-joke" class="primary-btn">Get Joke</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Random User Tab -->
+            <section id="user-tab" class="tab-pane fade-in">
+                <div class="card premium-card">
+                    <div class="card-header">
+                        <h2>👤 Random User Profile</h2>
+                    </div>
+                    <div class="card-body" id="user-content">
+                        <!-- Content dynamically injected here -->
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn-get-user" class="primary-btn">Get User</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JSON Posts Tab -->
+            <section id="posts-tab" class="tab-pane fade-in">
+                <div class="card premium-card">
+                    <div class="card-header">
+                        <h2>📝 JSONPlaceholder Posts</h2>
+                    </div>
+                    <div class="card-body scrollable-content" id="posts-content">
+                        <!-- Content dynamically injected here -->
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn-get-posts" class="primary-btn">Load Posts</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
